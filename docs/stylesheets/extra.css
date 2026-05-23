@@ -188,33 +188,57 @@ body, .md-typeset {
 }
 
 /* =============================================
-   セクション概要（抽象ガイドライン）
+   OK/NG 左右並びグリッド
    ============================================= */
-.section-intro {
-  background: #fff8f6;
-  border-left: 4px solid var(--red-main);
+.okng-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0 28px;
+}
+
+.okng-col {
+  border-radius: 6px;
   padding: 14px 18px;
-  margin: 14px 0 20px;
-  border-radius: 4px;
-  font-size: 0.92em;
+  font-size: 0.93em;
   line-height: 1.75;
-  color: #333;
 }
 
-.section-intro strong {
-  color: var(--red-main);
+.okng-col-ok {
+  background: #f1f8f3;
+  border-left: 4px solid #2e9e5b;
 }
 
-.section-intro .law-ref {
-  display: inline-block;
-  font-size: 0.78em;
-  background: #fff;
-  border: 1px solid #e0c4be;
-  color: #8a3a2e;
-  padding: 1px 8px;
-  border-radius: 10px;
-  margin: 0 2px;
-  white-space: nowrap;
+.okng-col-ng {
+  background: #fdf3f1;
+  border-left: 4px solid #d64545;
+}
+
+.okng-col p strong {
+  font-size: 1.02em;
+}
+
+.okng-col-ok p strong {
+  color: #1f7a44;
+}
+
+.okng-col-ng p strong {
+  color: #b13030;
+}
+
+.okng-col ul {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+}
+
+.okng-col li {
+  margin: 4px 0;
+}
+
+@media (max-width: 720px) {
+  .okng-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =============================================
