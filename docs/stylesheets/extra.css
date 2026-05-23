@@ -188,6 +188,36 @@ body, .md-typeset {
 }
 
 /* =============================================
+   セクション概要（抽象ガイドライン）
+   ============================================= */
+.section-intro {
+  background: #fff8f6;
+  border-left: 4px solid var(--red-main);
+  padding: 14px 18px;
+  margin: 14px 0 20px;
+  border-radius: 4px;
+  font-size: 0.92em;
+  line-height: 1.75;
+  color: #333;
+}
+
+.section-intro strong {
+  color: var(--red-main);
+}
+
+.section-intro .law-ref {
+  display: inline-block;
+  font-size: 0.78em;
+  background: #fff;
+  border: 1px solid #e0c4be;
+  color: #8a3a2e;
+  padding: 1px 8px;
+  border-radius: 10px;
+  margin: 0 2px;
+  white-space: nowrap;
+}
+
+/* =============================================
    OK/NGテーブル
    ============================================= */
 .okng-table {
