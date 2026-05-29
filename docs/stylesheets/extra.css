@@ -544,3 +544,159 @@ body, .md-typeset {
   font-size: 0.88em;
   line-height: 1.7;
 }
+
+/* =============================================
+   効果カード内の「言える範囲」サブタイトル強調
+   ============================================= */
+.effect-card > p:first-of-type {
+  background: #fff5ee;
+  border-left: 3px solid var(--red-main);
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  margin: 8px 0 14px;
+  font-size: 0.92em;
+  line-height: 1.65;
+}
+
+.effect-card > p:first-of-type strong {
+  color: var(--red-dark);
+  font-weight: 700;
+}
+
+/* セクション直下の冒頭ガイド文 */
+.md-typeset h2 + p {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 0.9em;
+  line-height: 1.8;
+  margin: 14px 0 22px;
+  color: #333;
+}
+
+.md-typeset h2 + p strong {
+  color: var(--red-dark);
+}
+
+/* =============================================
+   必須項目テーブル（赤系）
+   ============================================= */
+.required-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 0 22px;
+}
+
+.required-table th {
+  background-color: var(--red-main);
+  color: white;
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+}
+
+.required-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+  line-height: 1.65;
+  background: #fff;
+}
+
+.required-table td:nth-child(2) {
+  font-weight: 700;
+  color: var(--red-main);
+  background: #fdf0f0;
+  white-space: nowrap;
+  text-align: center;
+  width: 80px;
+}
+
+.required-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* =============================================
+   推奨項目テーブル（グレー系）
+   ============================================= */
+.recommended-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 0 22px;
+}
+
+.recommended-table th {
+  background-color: #607d8b;
+  color: white;
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+}
+
+.recommended-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+  line-height: 1.65;
+  background: #fff;
+}
+
+.recommended-table td:nth-child(2) {
+  font-weight: 700;
+  color: #607d8b;
+  background: #f5f7f8;
+  white-space: nowrap;
+  text-align: center;
+  width: 80px;
+}
+
+.recommended-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* =============================================
+   チェックリストカード
+   ============================================= */
+.checklist-card {
+  background: #fafafa;
+  border: 1px solid var(--gray-border);
+  border-left: 4px solid var(--red-main);
+  border-radius: 6px;
+  padding: 14px 22px;
+  margin: 14px 0;
+}
+
+.checklist-card h3 {
+  margin-top: 4px !important;
+  margin-bottom: 8px !important;
+  font-size: 1em;
+  color: var(--red-dark) !important;
+  border: none;
+  padding: 0;
+}
+
+.checklist-card ul {
+  margin: 8px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.checklist-card li {
+  margin: 6px 0;
+  line-height: 1.7;
+  font-size: 0.92em;
+}
+
+.checklist-card .task-list-control {
+  margin-right: 6px;
+}
