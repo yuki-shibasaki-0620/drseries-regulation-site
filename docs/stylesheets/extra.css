@@ -701,3 +701,207 @@ body, .md-typeset {
   margin-right: 6px;
 }
 
+/* =============================================
+   絶対に守らないといけないルール（最重要警告ブロック）
+   ============================================= */
+.must-follow {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe9e9 100%);
+  border: 2px solid var(--red-main);
+  border-radius: 10px;
+  padding: 20px 26px 24px;
+  margin: 32px 0;
+  box-shadow: 0 4px 16px rgba(198, 40, 40, 0.12);
+  position: relative;
+}
+
+.must-follow::before {
+  content: "MUST FOLLOW";
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--red-main);
+  color: white;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 4px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(198, 40, 40, 0.25);
+}
+
+.must-follow h2 {
+  margin-top: 6px !important;
+  color: var(--red-dark) !important;
+  border-bottom: 2px solid var(--red-main) !important;
+  font-size: 1.25em !important;
+}
+
+.must-follow > p {
+  color: #5a1a1a;
+  font-size: 0.92em;
+  margin: 10px 0 14px;
+  line-height: 1.7;
+}
+
+.must-follow > p strong {
+  background: linear-gradient(transparent 60%, #ffd6d6 60%);
+  font-weight: 700;
+  color: var(--red-dark);
+}
+
+.must-follow h3 {
+  color: var(--red-main) !important;
+  font-size: 1.05em !important;
+  margin-top: 22px !important;
+  margin-bottom: 8px !important;
+  padding-left: 10px;
+  border-left: 4px solid var(--red-main);
+}
+
+.must-follow blockquote {
+  background: #fff !important;
+  border-left: 4px solid var(--red-main) !important;
+  padding: 12px 18px !important;
+  margin: 10px 0 6px !important;
+  border-radius: 4px;
+  color: #333 !important;
+  font-size: 0.92em;
+  line-height: 1.8;
+}
+
+.must-follow blockquote p {
+  margin: 0 !important;
+}
+
+.must-follow ul {
+  margin: 8px 0 12px;
+  padding-left: 1.4em;
+}
+
+.must-follow li {
+  margin: 4px 0;
+  line-height: 1.65;
+  font-size: 0.92em;
+}
+
+.must-follow > p:has(strong:only-child),
+.must-follow p > strong:only-child {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* =============================================
+   !!! note 内のテーブル（青系・noteと統一）
+   ※デフォルトの赤テーブルスタイルを上書きするため
+     specificityを上げている
+   ============================================= */
+.md-typeset .admonition.note table:not([class]),
+.md-typeset details.note table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85em;
+  border: 1px solid #b3d4fc !important;
+  border-radius: 4px;
+  margin: 8px 0 4px;
+  background: white !important;
+}
+
+.md-typeset .admonition.note table:not([class]) th,
+.md-typeset details.note table:not([class]) th {
+  background-color: #e3edfb !important;
+  color: #1a4d9e !important;
+  padding: 8px 12px !important;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+  border-bottom: 1px solid #b3d4fc !important;
+}
+
+.md-typeset .admonition.note table:not([class]) td,
+.md-typeset details.note table:not([class]) td {
+  padding: 8px 12px !important;
+  border-bottom: 1px solid #e7eef7 !important;
+  vertical-align: top;
+  line-height: 1.6;
+  background: white !important;
+}
+
+.md-typeset .admonition.note table:not([class]) td:first-child,
+.md-typeset details.note table:not([class]) td:first-child {
+  font-weight: 600;
+  color: #1a4d9e !important;
+  white-space: nowrap;
+  background: #f5faff !important;
+}
+
+.md-typeset .admonition.note table:not([class]) tr:nth-child(even) td,
+.md-typeset details.note table:not([class]) tr:nth-child(even) td {
+  background: #fafcff !important;
+}
+
+.md-typeset .admonition.note table:not([class]) tr:nth-child(even) td:first-child,
+.md-typeset details.note table:not([class]) tr:nth-child(even) td:first-child {
+  background: #eaf2fd !important;
+}
+
+.md-typeset .admonition.note table:not([class]) tr:last-child td,
+.md-typeset details.note table:not([class]) tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* =============================================
+   法律バッジ（セクション見出しの横に表示）
+   ============================================= */
+.law-badge {
+  display: inline-block;
+  font-size: 0.55em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+  color: white;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.law-badge.law-yakki {
+  background-color: #c62828;
+}
+
+.law-badge.law-keihyo {
+  background-color: #ef6c00;
+}
+
+.law-badge.law-tokusho {
+  background-color: #1976d2;
+}
+
+.law-badge.law-stema {
+  background-color: #7b1fa2;
+}
+
+/* =============================================
+   セクションディバイダー（商品別↔全商品共通の区切り）
+   ============================================= */
+.section-divider {
+  text-align: center;
+  margin: 56px 0 36px;
+  position: relative;
+  border-top: 2px dashed var(--red-main);
+}
+
+.section-divider-label {
+  background: #fff;
+  color: var(--red-dark);
+  font-weight: 700;
+  font-size: 0.95em;
+  letter-spacing: 0.05em;
+  padding: 4px 20px;
+  position: relative;
+  top: -14px;
+  border: 2px solid var(--red-main);
+  border-radius: 20px;
+}
+
