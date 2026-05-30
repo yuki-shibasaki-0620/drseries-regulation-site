@@ -893,6 +893,12 @@ body, .md-typeset {
   background-color: #7b1fa2 !important;
 }
 
+/* TOC（右サイドバー目次）では法律バッジを非表示 */
+.md-nav--secondary .law-badge,
+.md-nav .law-badge {
+  display: none !important;
+}
+
 /* =============================================
    セクショングループ見出し（商品別↔全商品共通の区切り）
    ============================================= */
