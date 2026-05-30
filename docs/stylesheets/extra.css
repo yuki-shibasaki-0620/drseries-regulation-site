@@ -703,43 +703,55 @@ body, .md-typeset {
 
 /* =============================================
    注釈テーブル（青系・noteボックス風）
+   ※デフォルトの赤テーブルスタイルを上書きするため
+     specificityを上げている
    ============================================= */
-.note-table table {
+.md-typeset .note-table table {
   border-collapse: collapse;
   width: 100%;
   font-size: 0.9em;
-  border: 1px solid #b3d4fc;
-  border-left: 4px solid #448aff;
+  border: 1px solid #b3d4fc !important;
+  border-left: 4px solid #448aff !important;
   border-radius: 6px;
   overflow: hidden;
   margin: 14px 0 22px;
   background: #eef5ff;
 }
 
-.note-table th {
-  background-color: #448aff;
-  color: white;
+.md-typeset .note-table table th {
+  background-color: #448aff !important;
+  color: white !important;
   padding: 10px 16px;
   text-align: left;
   font-weight: 700;
   font-size: 0.85em;
+  border: none;
 }
 
-.note-table td {
+.md-typeset .note-table table td {
   padding: 10px 16px;
-  border-bottom: 1px solid #d6e6fb;
+  border-bottom: 1px solid #d6e6fb !important;
   vertical-align: top;
   line-height: 1.65;
-  background: #f5faff;
+  background: #f5faff !important;
+  color: #333;
 }
 
-.note-table td:first-child {
+.md-typeset .note-table table td:first-child {
   font-weight: 700;
-  color: #1a4d9e;
-  background: #e3edfb;
+  color: #1a4d9e !important;
+  background: #e3edfb !important;
   white-space: nowrap;
 }
 
-.note-table tr:last-child td {
-  border-bottom: none;
+.md-typeset .note-table table tr:nth-child(even) td {
+  background: #eaf2fd !important;
+}
+
+.md-typeset .note-table table tr:nth-child(even) td:first-child {
+  background: #d8e6f7 !important;
+}
+
+.md-typeset .note-table table tr:last-child td {
+  border-bottom: none !important;
 }
