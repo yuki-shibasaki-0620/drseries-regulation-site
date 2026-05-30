@@ -851,57 +851,81 @@ body, .md-typeset {
 
 /* =============================================
    法律バッジ（セクション見出しの横に表示）
+   ※h2のスタイル継承に勝てるよう、specificityを上げて
+     !important を付けている
    ============================================= */
-.law-badge {
-  display: inline-block;
-  font-size: 0.55em;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 3px 10px;
-  border-radius: 4px;
-  margin-left: 6px;
-  vertical-align: middle;
-  color: white;
-  white-space: nowrap;
-  line-height: 1.4;
+.md-typeset h2 .law-badge,
+.md-typeset .law-badge {
+  display: inline-block !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  padding: 4px 12px !important;
+  border-radius: 12px !important;
+  margin-left: 8px !important;
+  vertical-align: middle !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+  line-height: 1.5 !important;
+  border: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+  text-shadow: none !important;
+  font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif !important;
 }
 
-.law-badge.law-yakki {
-  background-color: #c62828;
+.md-typeset h2 .law-badge.law-yakki,
+.md-typeset .law-badge.law-yakki {
+  background-color: #c62828 !important;
 }
 
-.law-badge.law-keihyo {
-  background-color: #ef6c00;
+.md-typeset h2 .law-badge.law-keihyo,
+.md-typeset .law-badge.law-keihyo {
+  background-color: #ef6c00 !important;
 }
 
-.law-badge.law-tokusho {
-  background-color: #1976d2;
+.md-typeset h2 .law-badge.law-tokusho,
+.md-typeset .law-badge.law-tokusho {
+  background-color: #1976d2 !important;
 }
 
-.law-badge.law-stema {
-  background-color: #7b1fa2;
+.md-typeset h2 .law-badge.law-stema,
+.md-typeset .law-badge.law-stema {
+  background-color: #7b1fa2 !important;
 }
 
 /* =============================================
-   セクションディバイダー（商品別↔全商品共通の区切り）
+   セクショングループ見出し（商品別↔全商品共通の区切り）
    ============================================= */
-.section-divider {
-  text-align: center;
-  margin: 56px 0 36px;
+.section-group-header {
   position: relative;
-  border-top: 2px dashed var(--red-main);
+  text-align: center;
+  margin: 72px 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.section-divider-label {
-  background: #fff;
-  color: var(--red-dark);
+.section-group-header::before,
+.section-group-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #d0d0d0 30%,
+    #d0d0d0 70%,
+    transparent 100%
+  );
+}
+
+.section-group-label {
+  font-size: 0.78em;
   font-weight: 700;
-  font-size: 0.95em;
-  letter-spacing: 0.05em;
-  padding: 4px 20px;
-  position: relative;
-  top: -14px;
-  border: 2px solid var(--red-main);
-  border-radius: 20px;
+  letter-spacing: 0.25em;
+  color: #888;
+  text-transform: none;
+  padding: 0 8px;
+  white-space: nowrap;
 }
 
