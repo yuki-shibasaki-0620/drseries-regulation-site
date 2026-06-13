@@ -702,7 +702,114 @@ body, .md-typeset {
 }
 
 /* =============================================
-   絶対に守らないといけないルール（最重要警告ブロック）
+   四角枠で囲った医薬品区分ラベル
+   ============================================= */
+.boxed-label {
+  display: inline-block;
+  border: 2px solid #333;
+  padding: 4px 14px;
+  font-weight: 700;
+  font-size: 0.95em;
+  line-height: 1.3;
+  background: #fff;
+  color: #222;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+}
+
+/* =============================================
+   マーカーハイライト（==テキスト== で使う）
+   ============================================= */
+.md-typeset mark {
+  background: linear-gradient(transparent 55%, #f3bcc5 55%);
+  color: var(--red-dark);
+  font-weight: 700;
+  padding: 0 0.05em;
+  border-radius: 0;
+}
+
+/* =============================================
+   絶対ルール：重要セクションの帯＋番号バッジ
+   ============================================= */
+.must-section {
+  background: linear-gradient(180deg, #fdf4f6 0%, #fffafb 100%);
+  border: 1px solid #ecd0d6;
+  border-radius: 12px;
+  padding: 18px 26px 26px;
+  margin: 14px 0 36px;
+}
+
+.must-section .effect-card {
+  background: #ffffff;
+  border-color: #ecd0d6;
+}
+
+.must-section blockquote {
+  background: #faf2f4;
+  border-left: 4px solid var(--red-main);
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 0;
+  padding: 12px 16px;
+  color: #333;
+  font-size: 0.92em;
+  line-height: 1.8;
+}
+
+.must-section blockquote p {
+  margin: 0;
+}
+
+.must-section .sub-point {
+  background: #ffffff;
+  border: 1px solid #ecd0d6;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  font-size: 0.9em;
+  line-height: 1.85;
+  color: #3a3a3c;
+}
+
+.must-section .sub-point > p:first-child {
+  margin: 0 0 10px;
+  font-size: 1.08em;
+}
+
+.must-section .sub-point > p:first-child strong {
+  color: var(--red-dark);
+}
+
+.must-section .sub-point > :last-child {
+  margin-bottom: 0;
+}
+
+.sub-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  height: 1.6em;
+  background: var(--red-main);
+  color: #ffffff !important;
+  border-radius: 50%;
+  font-size: 0.74em;
+  font-weight: 700;
+  margin-right: 8px;
+  vertical-align: 0.12em;
+}
+
+.must-section h3 {
+  font-size: 1.15em !important;
+  color: var(--red-dark) !important;
+  border-left: 5px solid var(--red-main) !important;
+  padding-left: 14px !important;
+  margin-top: 6px !important;
+  line-height: 1.45;
+}
+
+/* =============================================
+   絶対に守らないといけないルール（旧スタイル・残置）
    ============================================= */
 .must-follow {
   background: linear-gradient(135deg, #fff5f5 0%, #ffe9e9 100%);
@@ -893,6 +1000,12 @@ body, .md-typeset {
   background-color: #7b1fa2 !important;
 }
 
+/* 右サイドバーの目次（TOC）からは法律バッジを非表示 */
+.md-nav--secondary .law-badge,
+.md-sidebar--secondary .law-badge {
+  display: none !important;
+}
+
 /* TOC（右サイドバー目次）では法律バッジを非表示 */
 .md-nav--secondary .law-badge,
 .md-nav .law-badge {
@@ -933,5 +1046,98 @@ body, .md-typeset {
   text-transform: none;
   padding: 0 8px;
   white-space: nowrap;
+}
+
+/* =============================================
+   言える／言えない（左ラベル定義リスト）
+   ============================================= */
+.say-dl {
+  border-top: 1px solid var(--gray-border);
+  margin: 14px 0 4px;
+}
+
+.say-dl .say-row {
+  display: flex;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.say-dl .say-label {
+  flex: 0 0 96px;
+  font-weight: 700;
+  font-size: 0.92em;
+}
+
+.say-dl .say-label.ok { color: #1f7a44; }
+.say-dl .say-label.ng { color: #b13030; }
+
+.say-dl .say-body {
+  flex: 1;
+  font-size: 0.92em;
+  line-height: 1.85;
+  color: #3a3a3c;
+}
+
+@media (max-width: 600px) {
+  .say-dl .say-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .say-dl .say-label { flex: none; }
+}
+
+/* =============================================
+   商品紹介ヒーロー（画像＋説明）
+   ============================================= */
+.product-hero {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8px 0 32px;
+}
+
+.product-hero .product-photo-wrap {
+  flex: 0 0 34%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.product-hero .product-photo {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-hero .product-hero-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.product-hero .product-hero-text h3 {
+  margin-top: 0 !important;
+  color: var(--red-dark) !important;
+}
+
+.md-typeset details.info-details {
+  margin: 8px 0 24px;
+  font-size: 0.9em;
+}
+
+.md-typeset details.info-details > summary {
+  font-weight: 700;
+  color: var(--red-main);
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .product-hero .product-photo-wrap {
+    flex: 0 0 100%;
+  }
+  .product-hero .product-photo {
+    width: 60%;
+    max-width: 240px;
+  }
 }
 

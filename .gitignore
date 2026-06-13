@@ -1,0 +1,18 @@
+# Python venv
+.venv/
+__pycache__/
+*.pyc
+
+# Obsidian config
+.obsidian/
+
+# 作業用ファイル
+_rules-flat-list.md
+*_PKGimage*.png
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MkDocs build
+site/
