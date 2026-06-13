@@ -24,6 +24,7 @@ theme:
     logo: material/scale-balance
 
 nav:
+  - ホーム: index.md
   - レギュレーション:
     - アセテクト: products/acetect.md
   - "表現OK/NG集":
