@@ -1,0 +1,1209 @@
+/* =============================================
+   サイトヘッダー（ナビバー）
+   ============================================= */
+.md-header {
+  background: #4a0a0a !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.md-header__title {
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  opacity: 0.95;
+}
+
+.md-tabs {
+  background: #6e1010 !important;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.md-tabs__link {
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1 !important;
+}
+
+.md-tabs__link--active::after {
+  background-color: #f48a8a !important;
+  height: 2px;
+}
+
+.md-search__input {
+  background: rgba(255,255,255,0.1) !important;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255,255,255,0.5) !important;
+}
+
+/* =============================================
+   フォント・全体サイズ・幅
+   ============================================= */
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap');
+
+html {
+  font-size: 125%;
+}
+
+.md-typeset {
+  font-size: 0.85rem;
+}
+
+body, .md-typeset {
+  font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+}
+
+.md-grid {
+  max-width: 80rem;
+}
+
+/* =============================================
+   カラー変数
+   ============================================= */
+:root {
+  --red-dark:    #4a0a0a;
+  --red-main:    #c62828;
+  --red-light:   #fdecea;
+  --green:       #2e7d32;
+  --green-light: #e8f5e9;
+  --red-ng:      #c62828;
+  --red-ng-light:#fdecea;
+  --gray-border: #e0e0e0;
+  --gray-bg:     #f5f5f5;
+}
+
+/* =============================================
+   商品ヘッダー
+   ============================================= */
+.product-header {
+  background: linear-gradient(135deg, var(--red-dark) 0%, var(--red-main) 100%);
+  color: white;
+  padding: 32px 36px 28px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.product-header h1 {
+  color: white !important;
+  margin: 0 0 4px 0 !important;
+  font-size: 2.3em !important;
+  font-weight: 700 !important;
+  border: none !important;
+  padding: 0 !important;
+  letter-spacing: 0.02em;
+}
+
+.product-header .subtitle {
+  opacity: 0.85;
+  font-size: 0.92em;
+  margin-bottom: 20px;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.product-tag {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.78em;
+  border: 1px solid rgba(255,255,255,0.4);
+  letter-spacing: 0.02em;
+}
+
+/* =============================================
+   CONTENTSカード
+   ============================================= */
+.contents-card {
+  background: white;
+  border: 1px solid var(--gray-border);
+  border-radius: 8px;
+  padding: 20px 28px;
+  margin-bottom: 36px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+
+.contents-card .contents-title {
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.contents-card .contents-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+  line-height: 2;
+}
+
+.contents-card .contents-links a {
+  color: var(--red-main);
+  font-size: 0.9em;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contents-card .contents-links a:hover {
+  text-decoration: underline;
+}
+
+/* =============================================
+   セクション見出し
+   ============================================= */
+.section-label {
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--red-main);
+  margin-bottom: -8px;
+  margin-top: 48px;
+}
+
+.md-typeset h2 {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #111;
+  border-bottom: 2px solid var(--red-main);
+  padding-bottom: 8px;
+  margin-top: 8px;
+}
+
+.md-typeset h3 {
+  color: var(--red-main);
+  font-weight: 700;
+}
+
+/* =============================================
+   効能カード（疾患ごとのブロック）
+   ============================================= */
+.effect-card {
+  border: 1px solid #e6d4d0;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 18px 0 22px;
+  background: #fffdfc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.effect-card h4 {
+  margin-top: 0 !important;
+  margin-bottom: 6px !important;
+  color: var(--red-main);
+  font-size: 1.08em;
+  border-bottom: 1px dashed #e6d4d0;
+  padding-bottom: 6px;
+}
+
+.effect-card > p:first-of-type strong {
+  color: #333;
+  font-size: 0.96em;
+}
+
+/* =============================================
+   ルール表（媒体別省略ルール等）
+   ============================================= */
+.rule-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 0.92em;
+}
+
+.rule-table th {
+  background: var(--red-main);
+  color: #fff;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.rule-table td {
+  border: 1px solid #e6d4d0;
+  padding: 10px 12px;
+}
+
+.rule-table tbody tr:nth-child(even) {
+  background: #fdfaf9;
+}
+
+/* =============================================
+   OK/NG 左右並びグリッド
+   ============================================= */
+.okng-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0 28px;
+}
+
+.okng-col {
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 0.93em;
+  line-height: 1.75;
+}
+
+.okng-col-ok {
+  background: #f1f8f3;
+  border-left: 4px solid #2e9e5b;
+}
+
+.okng-col-ng {
+  background: #fdf3f1;
+  border-left: 4px solid #d64545;
+}
+
+.okng-col p strong {
+  font-size: 1.02em;
+}
+
+.okng-col-ok p strong {
+  color: #1f7a44;
+}
+
+.okng-col-ng p strong {
+  color: #b13030;
+}
+
+.okng-col ul {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+}
+
+.okng-col li {
+  margin: 4px 0;
+}
+
+@media (max-width: 720px) {
+  .okng-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================================
+   OK/NGテーブル
+   ============================================= */
+.okng-table {
+  margin: 16px 0 28px;
+}
+
+.okng-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.okng-table th {
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+  letter-spacing: 0.03em;
+}
+
+.okng-table th:nth-child(1) {
+  background-color: #37474f;
+  color: white;
+  width: 22%;
+}
+
+.okng-table th:nth-child(2) {
+  background-color: var(--green);
+  color: white;
+}
+
+.okng-table th:nth-child(3) {
+  background-color: var(--red-ng);
+  color: white;
+}
+
+.okng-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+.okng-table td:nth-child(1) {
+  font-weight: 700;
+  background-color: #fafafa;
+  color: #333;
+}
+
+.okng-table td:nth-child(2) {
+  background-color: var(--green-light);
+}
+
+.okng-table td:nth-child(3) {
+  background-color: var(--red-ng-light);
+}
+
+.okng-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* =============================================
+   通常テーブル
+   ============================================= */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--red-main);
+  color: white;
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: #fff5f5;
+}
+
+/* =============================================
+   バッジ
+   ============================================= */
+.badge-ok {
+  display: inline-block;
+  background-color: var(--green);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.76em;
+  font-weight: 700;
+}
+
+.badge-ng {
+  display: inline-block;
+  background-color: var(--red-ng);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.76em;
+  font-weight: 700;
+}
+
+.badge-conditional {
+  display: inline-block;
+  background-color: #e65100;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.76em;
+  font-weight: 700;
+}
+
+/* =============================================
+   製造販売情報テーブル
+   ============================================= */
+.info-section-title {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--red-dark);
+  border-left: 4px solid var(--red-main);
+  padding-left: 12px;
+  margin: 28px 0 12px;
+}
+
+.md-typeset .info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  border: 1px solid var(--gray-border);
+  overflow: hidden;
+  display: table;
+}
+
+.md-typeset .info-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+  line-height: 1.6;
+  background-color: white;
+}
+
+.md-typeset .info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset .info-table td:first-child {
+  font-weight: 700;
+  color: var(--red-dark);
+  background-color: #fdf0f0 !important;
+  width: 30%;
+  white-space: nowrap;
+}
+
+/* =============================================
+   タブ
+   ============================================= */
+.md-typeset .tabbed-labels > label {
+  font-weight: 700;
+}
+
+/* =============================================
+   商品概要カード
+   ============================================= */
+.product-overview {
+  margin: 8px 0 32px;
+}
+
+.product-overview-desc {
+  color: #444;
+  font-size: 0.92em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.product-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.product-info-card {
+  background: white;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+  padding: 16px 18px 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.product-info-card .card-label {
+  font-size: 0.72em;
+  color: #888;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.product-info-card .card-value {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--red-main);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.product-info-card .card-value.price {
+  font-size: 1.4em;
+  color: var(--red-dark);
+}
+
+.product-info-card .card-sub {
+  font-size: 0.76em;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* =============================================
+   注釈ブロック
+   ============================================= */
+.note-box {
+  background: #fffde7;
+  border-left: 4px solid #f9a825;
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin: 8px 0 16px;
+  font-size: 0.88em;
+  line-height: 1.7;
+}
+
+/* =============================================
+   効果カード内の「言える範囲」サブタイトル強調
+   ============================================= */
+.effect-card > p:first-of-type {
+  background: #fff5ee;
+  border-left: 3px solid var(--red-main);
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  margin: 8px 0 14px;
+  font-size: 0.92em;
+  line-height: 1.65;
+}
+
+.effect-card > p:first-of-type strong {
+  color: var(--red-dark);
+  font-weight: 700;
+}
+
+/* セクション直下の冒頭ガイド文 */
+.md-typeset h2 + p {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 0.9em;
+  line-height: 1.8;
+  margin: 14px 0 22px;
+  color: #333;
+}
+
+.md-typeset h2 + p strong {
+  color: var(--red-dark);
+}
+
+/* =============================================
+   必須項目テーブル（赤系）
+   ============================================= */
+.required-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 0 22px;
+}
+
+.required-table th {
+  background-color: var(--red-main);
+  color: white;
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+}
+
+.required-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+  line-height: 1.65;
+  background: #fff;
+}
+
+.required-table td:nth-child(2) {
+  font-weight: 700;
+  color: var(--red-main);
+  background: #fdf0f0;
+  white-space: nowrap;
+  text-align: center;
+  width: 80px;
+}
+
+.required-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* =============================================
+   推奨項目テーブル（グレー系）
+   ============================================= */
+.recommended-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 0 22px;
+}
+
+.recommended-table th {
+  background-color: #607d8b;
+  color: white;
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+}
+
+.recommended-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-border);
+  vertical-align: top;
+  line-height: 1.65;
+  background: #fff;
+}
+
+.recommended-table td:nth-child(2) {
+  font-weight: 700;
+  color: #607d8b;
+  background: #f5f7f8;
+  white-space: nowrap;
+  text-align: center;
+  width: 80px;
+}
+
+.recommended-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* =============================================
+   チェックリストカード
+   ============================================= */
+.checklist-card {
+  background: #fafafa;
+  border: 1px solid var(--gray-border);
+  border-left: 4px solid var(--red-main);
+  border-radius: 6px;
+  padding: 14px 22px;
+  margin: 14px 0;
+}
+
+.checklist-card h3 {
+  margin-top: 4px !important;
+  margin-bottom: 8px !important;
+  font-size: 1em;
+  color: var(--red-dark) !important;
+  border: none;
+  padding: 0;
+}
+
+.checklist-card ul {
+  margin: 8px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.checklist-card li {
+  margin: 6px 0;
+  line-height: 1.7;
+  font-size: 0.92em;
+}
+
+.checklist-card .task-list-control {
+  margin-right: 6px;
+}
+
+/* =============================================
+   四角枠で囲った医薬品区分ラベル
+   ============================================= */
+.boxed-label {
+  display: inline-block;
+  border: 2px solid #333;
+  padding: 4px 14px;
+  font-weight: 700;
+  font-size: 0.95em;
+  line-height: 1.3;
+  background: #fff;
+  color: #222;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+}
+
+/* =============================================
+   マーカーハイライト（==テキスト== で使う）
+   ============================================= */
+.md-typeset mark {
+  background: linear-gradient(transparent 55%, #f3bcc5 55%);
+  color: var(--red-dark);
+  font-weight: 700;
+  padding: 0 0.05em;
+  border-radius: 0;
+}
+
+/* =============================================
+   絶対ルール：重要セクションの帯＋番号バッジ
+   ============================================= */
+.must-section {
+  background: linear-gradient(180deg, #fdf4f6 0%, #fffafb 100%);
+  border: 1px solid #ecd0d6;
+  border-radius: 12px;
+  padding: 18px 26px 26px;
+  margin: 14px 0 36px;
+}
+
+.must-section .effect-card {
+  background: #ffffff;
+  border-color: #ecd0d6;
+}
+
+.must-section blockquote {
+  background: #faf2f4;
+  border-left: 4px solid var(--red-main);
+  border-radius: 0 6px 6px 0;
+  margin: 6px 0 0;
+  padding: 12px 16px;
+  color: #333;
+  font-size: 0.92em;
+  line-height: 1.8;
+}
+
+.must-section blockquote p {
+  margin: 0;
+}
+
+.must-section .sub-point {
+  background: #ffffff;
+  border: 1px solid #ecd0d6;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  font-size: 0.9em;
+  line-height: 1.85;
+  color: #3a3a3c;
+}
+
+.must-section .sub-point > p:first-child {
+  margin: 0 0 10px;
+  font-size: 1.08em;
+}
+
+.must-section .sub-point > p:first-child strong {
+  color: var(--red-dark);
+}
+
+.must-section .sub-point > :last-child {
+  margin-bottom: 0;
+}
+
+.sub-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  height: 1.6em;
+  background: var(--red-main);
+  color: #ffffff !important;
+  border-radius: 50%;
+  font-size: 0.74em;
+  font-weight: 700;
+  margin-right: 8px;
+  vertical-align: 0.12em;
+}
+
+.must-section h3 {
+  font-size: 1.15em !important;
+  color: var(--red-dark) !important;
+  border-left: 5px solid var(--red-main) !important;
+  padding-left: 14px !important;
+  margin-top: 6px !important;
+  line-height: 1.45;
+}
+
+/* =============================================
+   絶対に守らないといけないルール（旧スタイル・残置）
+   ============================================= */
+.must-follow {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe9e9 100%);
+  border: 2px solid var(--red-main);
+  border-radius: 10px;
+  padding: 20px 26px 24px;
+  margin: 32px 0;
+  box-shadow: 0 4px 16px rgba(198, 40, 40, 0.12);
+  position: relative;
+}
+
+.must-follow::before {
+  content: "MUST FOLLOW";
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--red-main);
+  color: white;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 4px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(198, 40, 40, 0.25);
+}
+
+.must-follow h2 {
+  margin-top: 6px !important;
+  color: var(--red-dark) !important;
+  border-bottom: 2px solid var(--red-main) !important;
+  font-size: 1.25em !important;
+}
+
+.must-follow > p {
+  color: #5a1a1a;
+  font-size: 0.92em;
+  margin: 10px 0 14px;
+  line-height: 1.7;
+}
+
+.must-follow > p strong {
+  background: linear-gradient(transparent 60%, #ffd6d6 60%);
+  font-weight: 700;
+  color: var(--red-dark);
+}
+
+.must-follow h3 {
+  color: var(--red-main) !important;
+  font-size: 1.05em !important;
+  margin-top: 22px !important;
+  margin-bottom: 8px !important;
+  padding-left: 10px;
+  border-left: 4px solid var(--red-main);
+}
+
+.must-follow blockquote {
+  background: #fff !important;
+  border-left: 4px solid var(--red-main) !important;
+  padding: 12px 18px !important;
+  margin: 10px 0 6px !important;
+  border-radius: 4px;
+  color: #333 !important;
+  font-size: 0.92em;
+  line-height: 1.8;
+}
+
+.must-follow blockquote p {
+  margin: 0 !important;
+}
+
+.must-follow ul {
+  margin: 8px 0 12px;
+  padding-left: 1.4em;
+}
+
+.must-follow li {
+  margin: 4px 0;
+  line-height: 1.65;
+  font-size: 0.92em;
+}
+
+.must-follow > p:has(strong:only-child),
+.must-follow p > strong:only-child {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* =============================================
+   !!! note 内のテーブル（青系・noteと統一）
+   ※デフォルトの赤テーブルスタイルを上書きするため
+     specificityを上げている
+   ============================================= */
+.md-typeset .admonition.note table:not([class]),
+.md-typeset details.note table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85em;
+  border: 1px solid #b3d4fc !important;
+  border-radius: 4px;
+  margin: 8px 0 4px;
+  background: white !important;
+}
+
+.md-typeset .admonition.note table:not([class]) th,
+.md-typeset details.note table:not([class]) th {
+  background-color: #e3edfb !important;
+  color: #1a4d9e !important;
+  padding: 8px 12px !important;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85em;
+  border-bottom: 1px solid #b3d4fc !important;
+}
+
+.md-typeset .admonition.note table:not([class]) td,
+.md-typeset details.note table:not([class]) td {
+  padding: 8px 12px !important;
+  border-bottom: 1px solid #e7eef7 !important;
+  vertical-align: top;
+  line-height: 1.6;
+  background: white !important;
+}
+
+.md-typeset .admonition.note table:not([class]) td:first-child,
+.md-typeset details.note table:not([class]) td:first-child {
+  font-weight: 600;
+  color: #1a4d9e !important;
+  white-space: nowrap;
+  background: #f5faff !important;
+}
+
+.md-typeset .admonition.note table:not([class]) tr:nth-child(even) td,
+.md-typeset details.note table:not([class]) tr:nth-child(even) td {
+  background: #fafcff !important;
+}
+
+.md-typeset .admonition.note table:not([class]) tr:nth-child(even) td:first-child,
+.md-typeset details.note table:not([class]) tr:nth-child(even) td:first-child {
+  background: #eaf2fd !important;
+}
+
+.md-typeset .admonition.note table:not([class]) tr:last-child td,
+.md-typeset details.note table:not([class]) tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* =============================================
+   法律バッジ（セクション見出しの横に表示）
+   ※h2のスタイル継承に勝てるよう、specificityを上げて
+     !important を付けている
+   ============================================= */
+.md-typeset h2 .law-badge,
+.md-typeset .law-badge {
+  display: inline-block !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  padding: 4px 12px !important;
+  border-radius: 12px !important;
+  margin-left: 8px !important;
+  vertical-align: middle !important;
+  color: #ffffff !important;
+  white-space: nowrap !important;
+  line-height: 1.5 !important;
+  border: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+  text-shadow: none !important;
+  font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif !important;
+}
+
+.md-typeset h2 .law-badge.law-yakki,
+.md-typeset .law-badge.law-yakki {
+  background-color: #c62828 !important;
+}
+
+.md-typeset h2 .law-badge.law-keihyo,
+.md-typeset .law-badge.law-keihyo {
+  background-color: #ef6c00 !important;
+}
+
+.md-typeset h2 .law-badge.law-tokusho,
+.md-typeset .law-badge.law-tokusho {
+  background-color: #1976d2 !important;
+}
+
+.md-typeset h2 .law-badge.law-stema,
+.md-typeset .law-badge.law-stema {
+  background-color: #7b1fa2 !important;
+}
+
+/* 右サイドバーの目次（TOC）からは法律バッジを非表示 */
+.md-nav--secondary .law-badge,
+.md-sidebar--secondary .law-badge {
+  display: none !important;
+}
+
+/* =============================================
+   ホームページの3カラムカード
+   ============================================= */
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 20px 0 32px;
+}
+
+.home-card {
+  background: #fff;
+  border: 1px solid var(--gray-border);
+  border-top: 4px solid var(--red-main);
+  border-radius: 8px;
+  padding: 18px 22px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.home-card h3 {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  font-size: 1.1em !important;
+  color: var(--red-dark) !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.home-card > p {
+  font-size: 0.88em;
+  line-height: 1.7;
+  color: #555;
+  margin: 6px 0 12px;
+}
+
+.home-card ul {
+  margin: 8px 0 0;
+  padding-left: 1.1em;
+  list-style: none;
+}
+
+.home-card li {
+  margin: 6px 0;
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.6;
+}
+
+.home-card li::before {
+  content: "→";
+  position: absolute;
+  left: -2px;
+  color: var(--red-main);
+  font-weight: 700;
+}
+
+.home-card li a {
+  color: var(--red-main);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.home-card li a:hover {
+  text-decoration: underline;
+}
+
+/* TOC（右サイドバー目次）では法律バッジを非表示 */
+.md-nav--secondary .law-badge,
+.md-nav .law-badge {
+  display: none !important;
+}
+
+/* =============================================
+   セクショングループ見出し（商品別↔全商品共通の区切り）
+   ============================================= */
+.section-group-header {
+  position: relative;
+  text-align: center;
+  margin: 72px 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-group-header::before,
+.section-group-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #d0d0d0 30%,
+    #d0d0d0 70%,
+    transparent 100%
+  );
+}
+
+.section-group-label {
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #888;
+  text-transform: none;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+
+/* =============================================
+   言える／言えない（左ラベル定義リスト）
+   ============================================= */
+.say-dl {
+  border-top: 1px solid var(--gray-border);
+  margin: 14px 0 4px;
+}
+
+.say-dl .say-row {
+  display: flex;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.say-dl .say-label {
+  flex: 0 0 96px;
+  font-weight: 700;
+  font-size: 0.92em;
+}
+
+.say-dl .say-label.ok { color: #1f7a44; }
+.say-dl .say-label.ng { color: #b13030; }
+
+.say-dl .say-body {
+  flex: 1;
+  font-size: 0.92em;
+  line-height: 1.85;
+  color: #3a3a3c;
+}
+
+@media (max-width: 600px) {
+  .say-dl .say-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .say-dl .say-label { flex: none; }
+}
+
+/* =============================================
+   商品紹介ヒーロー（画像＋説明）
+   ============================================= */
+.product-hero {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8px 0 32px;
+}
+
+.product-hero .product-photo-wrap {
+  flex: 0 0 34%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.product-hero .product-photo {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-hero .product-hero-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.product-hero .product-hero-text h3 {
+  margin-top: 0 !important;
+  color: var(--red-dark) !important;
+}
+
+.md-typeset details.info-details {
+  margin: 8px 0 24px;
+  font-size: 0.9em;
+}
+
+.md-typeset details.info-details > summary {
+  font-weight: 700;
+  color: var(--red-main);
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .product-hero .product-photo-wrap {
+    flex: 0 0 100%;
+  }
+  .product-hero .product-photo {
+    width: 60%;
+    max-width: 240px;
+  }
+}
+
